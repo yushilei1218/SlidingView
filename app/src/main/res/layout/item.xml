@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yushilei.slidingview.widget.SlidingView xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:orientation="vertical">
+    <!--此处注意 clickable="true"  需要MoveV能够接收到click事件  因为里面子View太少-->
+    <LinearLayout
+        android:id="@id/id_slid_move_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#00fbff"
+        android:clickable="true"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/item_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/id_slid_drag_view"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:background="#F00"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_behavior=".widget.SlidBehavior">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="删除"
+            android:textColor="#FFF"/>
+    </LinearLayout>
+
+
+</com.yushilei.slidingview.widget.SlidingView>

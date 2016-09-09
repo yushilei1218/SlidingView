@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.yushilei.slidingview.Main2Activity">
+
+    <com.yushilei.slidingview.widget.SlidingView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@id/id_slid_move_view"
+            android:layout_width="match_parent"
+            android:onClick="showParent"
+            android:layout_height="200dp"
+            android:background="#00fbff"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/item_tv"
+                android:onClick="show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="show"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/id_slid_drag_view"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="#F00"
+            android:gravity="center"
+            android:onClick="del"
+            android:orientation="horizontal"
+            app:layout_behavior=".widget.SlidBehavior">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="删除"
+                android:textColor="#FFF"/>
+
+        </LinearLayout>
+
+    </com.yushilei.slidingview.widget.SlidingView>
+
+</RelativeLayout>
